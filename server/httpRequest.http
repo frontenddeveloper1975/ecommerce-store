@@ -1,0 +1,124 @@
+GET http://localhost:5000/api/users/usertest
+
+### CREATE NEW USER
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Janmichael",
+    "email": "janmichael@gmail.com",
+    "password": "123456"
+}
+
+### LOGIN
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "Janmichael",
+    "password": "123456"
+}
+
+### UPDATE USER
+PUT  http://localhost:5000/api/users/629b8c2b0161702aa7b11c87
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWI4YzJiMDE2MTcwMmFhN2IxMWM4NyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTQzNjUyNzYsImV4cCI6MTY1NDYyNDQ3Nn0.Cbz0fpaC2Hd3wtThMKrNYC8_ZLi5h20Y8M7kDlLu7-w
+
+{
+    "email": "maykel2@gmail.com"
+}
+
+### GET SINGLE USER
+GET http://localhost:5000/api/users/find/629b8c2b0161702aa7b11c87
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWI4YzJiMDE2MTcwMmFhN2IxMWM4NyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTQ3MjI5NzksImV4cCI6MTY1NDk4MjE3OX0.Bumgw3N6SPKCLZCzmt8y83jvOwaWHFAfjHplgdLdCuo
+
+### GET ALL USERS
+GET http://localhost:5000/api/users?new=true
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWJhZWFjYTc3OTMwNGJjZjE5N2U3OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDM3MDk4MSwiZXhwIjoxNjU0NjMwMTgxfQ.O5yBSa-8x9H246oqoeVtN1ZZLpAqgtrq1n63semsS5E
+
+### GET USERS STATS
+GET http://localhost:5000/api/users/stats
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWJhZWFjYTc3OTMwNGJjZjE5N2U3OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDM3MDk4MSwiZXhwIjoxNjU0NjMwMTgxfQ.O5yBSa-8x9H246oqoeVtN1ZZLpAqgtrq1n63semsS5E
+
+
+### ADD PRODUCT
+POST http://localhost:5000/api/products
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWJhZWFjYTc3OTMwNGJjZjE5N2U3OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDgxNDAwNiwiZXhwIjoxNjU1MDczMjA2fQ.h86CZgql26RpCnwrQgIRp98ySulAP2DiEP47uOrxKL4
+
+{
+    "title": "Arizona Womens Full Skirt-Juniors",
+    "desc": "Front Style: Flat Front",
+    "img": "/images/men_shoes_black.png",
+    "categories": ["skirt", "women"],
+    "size": "S",
+    "color": "black",
+    "price": 27.30
+}
+
+### ADD PRODUCT 2
+POST http://localhost:5000/api/products
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTFjNGRkZDRmYTBlZjVlOTMyNDExMyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1OTczOTY0MSwiZXhwIjoxNjU5OTk4ODQxfQ.rZyF1goJ_jlLqbqLCAvM6uIfIgmkjwMWMu9SvGfveec
+
+{
+    "title": "puma tshirt",
+    "desc": "Zipper, split tie neck, short sleeve, 94% Polyester",
+    "img": "/images/women-dress-black.png",
+    "categories": ["tshirt", "man"],
+    "size": "M",
+    "color": "black",
+    "price": 38.49
+}
+
+### ADD PRODUCT 3
+POST http://localhost:5000/api/products
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTFjNGRkZDRmYTBlZjVlOTMyNDExMyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1OTczOTY0MSwiZXhwIjoxNjU5OTk4ODQxfQ.rZyF1goJ_jlLqbqLCAvM6uIfIgmkjwMWMu9SvGfveec
+
+{
+    "title": "Men Jean",
+    "desc": "Button & Zipper, 100% Cottom, Straight Leg",
+    "img": "/images/men-jean-blue.png",
+    "categories": ["jean", "men"],
+    "size": ["S", "M", "L"],
+    "color": "white",
+    "price": 48.65
+}
+
+### GET ALL PRODUCTS BY CATEGORY
+http://localhost:5000/api/products?category=women
+
+### GET ALL PRODUCTS
+http://localhost:5000/api/products
+
+### ADD ORDER
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWI4YzJiMDE2MTcwMmFhN2IxMWM4NyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTQ3MjI5NzksImV4cCI6MTY1NDk4MjE3OX0.Bumgw3N6SPKCLZCzmt8y83jvOwaWHFAfjHplgdLdCuo
+
+{
+    "userId": "629baeaca779304bcf197e78",
+    "products": [
+        {
+            "productId": "21eereret23",
+            "quantity": 3
+        },
+        {
+            "productId": "21eeredrtrdf",
+            "quantity": 1
+        }
+    ],
+    "amount": 5,
+    "address": "USA"
+}
+
+### GET STATS
+GET http://localhost:5000/api/orders/income
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWJhZWFjYTc3OTMwNGJjZjE5N2U3OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDcyMzY4MywiZXhwIjoxNjU0OTgyODgzfQ.gj3auN0RHBeHtBPLXnrKR_OvvUE15Z3Z1ofR2koBD3g
+
+
