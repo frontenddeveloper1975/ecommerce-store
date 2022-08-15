@@ -47,32 +47,24 @@ token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWJhZWFjYTc3OTMwN
 ### ADD PRODUCT
 POST http://localhost:5000/api/products
 Content-Type: application/json
-token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWJhZWFjYTc3OTMwNGJjZjE5N2U3OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDgxNDAwNiwiZXhwIjoxNjU1MDczMjA2fQ.h86CZgql26RpCnwrQgIRp98ySulAP2DiEP47uOrxKL4
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdiZGQ3MzMzMzdkMTJmOWIwNjQzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDQwMzgxOCwiZXhwIjoxNjYwNjYzMDE4fQ.hviFhTcpZNZ5S4ojPGzkV-ooTarHJls5dX6YUXQau1o
 
 {
-    "title": "Arizona Womens Full Skirt-Juniors",
-    "desc": "Front Style: Flat Front",
-    "img": "/images/men_shoes_black.png",
-    "categories": ["skirt", "women"],
-    "size": "S",
-    "color": "black",
-    "price": 27.30
+    "title": "Midi Sheath Dress",
+    "desc": "zipper, short sleeve, 94% Polyester",
+    "img": "/images/women_dress_black.png",
+    "categories": ["dress", "women"],
+    "size": ["M"],
+    "color": ["black"],
+    "price": 40
 }
 
 ### ADD PRODUCT 2
 POST http://localhost:5000/api/products
 Content-Type: application/json
-token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTFjNGRkZDRmYTBlZjVlOTMyNDExMyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1OTczOTY0MSwiZXhwIjoxNjU5OTk4ODQxfQ.rZyF1goJ_jlLqbqLCAvM6uIfIgmkjwMWMu9SvGfveec
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjdiZGQ3MzMzMzdkMTJmOWIwNjQzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDQwMzgxOCwiZXhwIjoxNjYwNjYzMDE4fQ.hviFhTcpZNZ5S4ojPGzkV-ooTarHJls5dX6YUXQau1o
 
-{
-    "title": "puma tshirt",
-    "desc": "Zipper, split tie neck, short sleeve, 94% Polyester",
-    "img": "/images/women-dress-black.png",
-    "categories": ["tshirt", "man"],
-    "size": "M",
-    "color": "black",
-    "price": 38.49
-}
+{"title":"Men Jean","desc":"Button & Zipper, 100% Cottom, Straight Leg","img":"/images/men-jean-blue.png","categories":["jean","men"],"size":["S","M","L"],"color":["blue"],"price":48.65}
 
 ### ADD PRODUCT 3
 POST http://localhost:5000/api/products
